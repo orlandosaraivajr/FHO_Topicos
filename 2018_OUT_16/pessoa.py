@@ -9,7 +9,7 @@ class Pessoa:
 
 class PessoaFisica(Pessoa):
     def __init__(self, nome=None, cpf=None):
-        self.nome = nome
+        Pessoa.__init__(self, nome)
         if validador_cpf.match(cpf):
             self.cpf = cpf
         else:
@@ -17,5 +17,6 @@ class PessoaFisica(Pessoa):
 
 class PessoaJuridica(Pessoa):
     def __init__(self, nome=None, cnpj=None):
+        Pessoa.__init__(self, nome)
         self.nome = nome
         self.cnpj = cnpj
