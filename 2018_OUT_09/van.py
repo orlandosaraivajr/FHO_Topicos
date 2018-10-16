@@ -3,9 +3,10 @@ class Passageiro:
         self.nome = nome
 
 class Van:
-    lista = []
+    
     def __init__(self, motorista=None):
         self.motorista = motorista
+        self.lista = []
 
     def embarcar(self, Passageiro):
         if len(self.lista) < 16:
